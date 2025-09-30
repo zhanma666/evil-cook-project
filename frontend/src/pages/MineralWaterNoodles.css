@@ -1,0 +1,270 @@
+/* 矿泉水瓶面食做法页面容器 */
+.mineral-water-noodles-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--primary-darker), var(--primary-dark));
+  color: #333;
+}
+
+/* 页面头部 */
+.page-header {
+  background: linear-gradient(135deg, var(--primary-red), var(--secondary-orange));
+  padding: 30px 0;
+  color: white;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.back-link {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 20px;
+  font-size: 16px;
+  transition: opacity 0.3s ease;
+}
+
+.back-link:hover {
+  opacity: 0.8;
+}
+
+.page-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.page-subtitle {
+  font-size: 18px;
+  opacity: 0.9;
+  margin: 0;
+}
+
+/* 主要内容区域 */
+.page-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+/* 介绍区域 */
+.introduction-section {
+  margin-bottom: 40px;
+}
+
+.intro-card {
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  background: white;
+}
+
+.intro-content h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: var(--primary-red);
+}
+
+.intro-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.intro-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.intro-content ul li {
+  font-size: 16px;
+  padding: 10px 0;
+  border-bottom: 1px dashed #eee;
+}
+
+.intro-content ul li:last-child {
+  border-bottom: none;
+}
+
+.intro-content ul li::before {
+  content: "✓";
+  color: var(--accent-green);
+  font-weight: bold;
+  display: inline-block;
+  width: 20px;
+  margin-right: 10px;
+}
+
+/* 做法展示区域 */
+.practices-section {
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--primary-red);
+}
+
+.practices-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.practice-card {
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  background: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.practice-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.practice-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.practice-icon {
+  font-size: 36px;
+  margin-right: 15px;
+}
+
+.practice-title {
+  font-size: 22px;
+  margin: 0;
+  color: #333;
+}
+
+.practice-description {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.practice-tips h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: var(--secondary-orange);
+}
+
+.practice-tips ul {
+  padding-left: 20px;
+}
+
+.practice-tips ul li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+/* 使用建议区域 */
+.tips-section {
+  margin-bottom: 40px;
+}
+
+.tips-card {
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  background: white;
+}
+
+.tips-card h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: var(--primary-red);
+}
+
+.tips-card ul {
+  padding-left: 20px;
+}
+
+.tips-card ul li {
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+/* 行动按钮区域 */
+.actions-section {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.actions-section .btn {
+  min-width: 200px;
+  padding: 15px 30px;
+  font-size: 18px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .page-header {
+    padding: 20px 0;
+  }
+  
+  .page-title {
+    font-size: 26px;
+  }
+  
+  .page-subtitle {
+    font-size: 16px;
+  }
+  
+  .page-main {
+    padding: 20px 15px;
+  }
+  
+  .intro-card {
+    padding: 20px;
+  }
+  
+  .intro-content h2 {
+    font-size: 24px;
+  }
+  
+  .intro-content p {
+    font-size: 16px;
+  }
+  
+  .section-title {
+    font-size: 24px;
+  }
+  
+  .practices-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .practice-card {
+    padding: 20px;
+  }
+  
+  .practice-title {
+    font-size: 20px;
+  }
+  
+  .actions-section {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .actions-section .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}

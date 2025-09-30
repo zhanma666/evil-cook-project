@@ -1,0 +1,369 @@
+/* 分类页面容器 */
+.categories-container {
+  min-height: 100vh;
+  background: #f8f9fa;
+}
+
+/* 页面头部 */
+.categories-header {
+  background: linear-gradient(135deg, var(--primary-red), var(--secondary-orange));
+  padding: 30px 0;
+  color: white;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.page-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.page-subtitle {
+  font-size: 18px;
+  opacity: 0.9;
+  margin: 0;
+}
+
+/* 主要内容区域 */
+.categories-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  display: flex;
+  gap: 30px;
+}
+
+/* 侧边栏 */
+.categories-sidebar {
+  flex: 0 0 300px;
+}
+
+.sidebar-title {
+  font-size: 20px;
+  margin: 0 0 20px 0;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  color: #333;
+}
+
+.categories-card {
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.categories-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.category-item {
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid #eee;
+}
+
+.category-item:hover {
+  background: #f0f0f0;
+  border-color: #ddd;
+}
+
+.category-item.active {
+  background: rgba(255, 59, 48, 0.1);
+  border-color: var(--primary-red);
+}
+
+.category-icon {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.category-name {
+  font-weight: 500;
+  color: #333;
+}
+
+.category-description {
+  font-size: 13px;
+  color: #666;
+  margin: 8px 0 0 0;
+}
+
+/* 主内容区 */
+.categories-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* 搜索和筛选区域 */
+.filters-section {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.search-form {
+  margin-bottom: 20px;
+}
+
+.search-input-group {
+  display: flex;
+  gap: 10px;
+}
+
+.search-input {
+  flex: 1;
+}
+
+.search-button {
+  padding: 12px 25px;
+}
+
+.sort-filter {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.sort-label {
+  font-weight: 500;
+  color: #333;
+}
+
+.sort-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.sort-button {
+  padding: 8px 15px;
+  font-size: 14px;
+}
+
+/* 菜谱列表 */
+.recipes-section {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.results-header {
+  margin-bottom: 20px;
+}
+
+.results-title {
+  font-size: 20px;
+  color: #333;
+  margin: 0;
+}
+
+/* 菜谱网格 */
+.recipes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.recipe-card {
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.recipe-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.recipe-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.placeholder-image {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(255, 59, 48, 0.1), rgba(255, 204, 0, 0.1));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.placeholder-icon {
+  font-size: 48px;
+}
+
+.recipe-content {
+  padding: 20px;
+}
+
+.recipe-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: 600;
+}
+
+.recipe-author {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.recipe-meta {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #666;
+}
+
+.recipe-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.like-button,
+.view-button {
+  flex: 1;
+  padding: 8px;
+  font-size: 14px;
+}
+
+/* 加载和错误状态 */
+.loading-container,
+.error-container,
+.no-results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(255, 59, 48, 0.2);
+  border-top: 4px solid var(--primary-red);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error-message {
+  color: #ff3b30;
+  background: #ffebee;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #ffcdd2;
+}
+
+/* 响应式设计 */
+@media (max-width: 992px) {
+  .categories-main {
+    flex-direction: column;
+  }
+  
+  .categories-sidebar {
+    flex: 0 0 auto;
+  }
+  
+  .categories-card {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .categories-header {
+    padding: 20px 0;
+  }
+  
+  .page-title {
+    font-size: 28px;
+  }
+  
+  .page-subtitle {
+    font-size: 16px;
+  }
+  
+  .categories-main {
+    padding: 20px 15px;
+  }
+  
+  .search-input-group {
+    flex-direction: column;
+  }
+  
+  .sort-filter {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .recipes-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .header-content {
+    padding: 0 15px;
+  }
+  
+  .page-title {
+    font-size: 24px;
+  }
+  
+  .page-subtitle {
+    font-size: 14px;
+  }
+  
+  .categories-main {
+    padding: 15px 10px;
+  }
+  
+  .categories-card,
+  .filters-section,
+  .recipes-section {
+    padding: 20px 15px;
+  }
+  
+  .recipe-actions {
+    flex-direction: column;
+  }
+  
+  .like-button,
+  .view-button {
+    width: 100%;
+  }
+}

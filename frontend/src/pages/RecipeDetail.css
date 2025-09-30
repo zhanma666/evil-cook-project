@@ -1,0 +1,377 @@
+/* 菜谱详情容器 */
+.recipe-detail-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #f8f9fa;
+  min-height: 100vh;
+}
+
+/* 加载和错误状态 */
+.loading-container,
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(255, 59, 48, 0.2);
+  border-top: 4px solid var(--primary-red);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error-message {
+  color: #ff3b30;
+  background: #ffebee;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #ffcdd2;
+}
+
+/* 菜谱头部 */
+.recipe-header {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.cover-image {
+  flex: 0 0 300px;
+  height: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.cover-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.placeholder-image {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(255, 59, 48, 0.1), rgba(255, 204, 0, 0.1));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.placeholder-icon {
+  font-size: 48px;
+}
+
+.recipe-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.recipe-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin: 0 0 15px 0;
+}
+
+.author-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.author-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.author-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar-placeholder {
+  font-size: 28px;
+}
+
+.author-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.author-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.author-level {
+  font-size: 14px;
+  color: #ff3b30;
+}
+
+.metadata {
+  display: flex;
+  gap: 20px;
+}
+
+.metadata p {
+  font-size: 16px;
+  color: #666;
+}
+
+/* 材料清单 */
+.materials-section {
+  margin-bottom: 30px;
+}
+
+.materials-section h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.materials-section ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.materials-section li {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* 制作步骤 */
+.steps-section {
+  margin-bottom: 30px;
+}
+
+.steps-section h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.steps-section ol {
+  list-style-type: decimal;
+  padding-left: 20px;
+}
+
+.steps-section li {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* 科学原理 */
+.principle-section {
+  margin-bottom: 30px;
+}
+
+.principle-card {
+  padding: 25px;
+}
+
+.principle-card h3 {
+  font-size: 18px;
+  color: #333;
+  margin: 0 0 10px 0;
+}
+
+.principle-card p {
+  color: #666;
+  line-height: 1.6;
+  margin: 0 0 20px 0;
+}
+
+.principle-card p:last-child {
+  margin-bottom: 0;
+}
+
+/* 成品展示 */
+.results-section {
+  margin-bottom: 30px;
+}
+
+.subsection-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin: 25px 0 15px 0;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.result-card {
+  padding: 15px;
+  text-align: center;
+}
+
+.result-image {
+  height: 150px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.result-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.result-label {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+/* 评论区域 */
+.comments-section {
+  margin-bottom: 30px;
+}
+
+.comments-card {
+  padding: 0;
+}
+
+.comment-form {
+  padding: 25px;
+  border-bottom: 1px solid #eee;
+}
+
+.form-header h3 {
+  font-size: 18px;
+  color: #333;
+  margin: 0 0 15px 0;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.comment-input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 15px;
+  resize: vertical;
+}
+
+.comment-input:focus {
+  outline: none;
+  border-color: #ff3b30;
+  box-shadow: 0 0 0 2px rgba(255, 59, 48, 0.2);
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.comments-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.no-comments {
+  padding: 40px 20px;
+  text-align: center;
+  color: #999;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .recipe-detail-container {
+    padding: 15px;
+  }
+  
+  .recipe-header {
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .cover-image {
+    width: 100%;
+    flex: 0 0 auto;
+  }
+  
+  .recipe-meta {
+    grid-template-columns: 1fr;
+  }
+  
+  .recipe-actions {
+    flex-direction: column;
+  }
+  
+  .action-button {
+    width: 100%;
+  }
+  
+  .results-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .step-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .step-image {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .recipe-detail-container {
+    padding: 10px;
+  }
+  
+  .recipe-title {
+    font-size: 24px;
+  }
+  
+  .section-title {
+    font-size: 20px;
+  }
+  
+  .results-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .comment-form {
+    padding: 20px 15px;
+  }
+}

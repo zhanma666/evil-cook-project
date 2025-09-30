@@ -1,0 +1,597 @@
+/* 首页容器 */
+.home-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--primary-darker), var(--primary-dark));
+  color: #333;
+}
+
+/* 顶部导航栏 */
+.home-header {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-color);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.header-left {
+  flex: 0 0 auto;
+}
+
+.header-right {
+  flex: 0 0 300px;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  background: linear-gradient(to right, var(--primary-red), var(--accent-gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px rgba(255, 59, 48, 0.3);
+  margin: 0;
+}
+
+.main-nav {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-link {
+  color: #666;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background: rgba(255, 59, 48, 0.1);
+  color: var(--primary-red);
+}
+
+.search-container {
+  width: 100%;
+}
+
+.search-form {
+  display: flex;
+  gap: 10px;
+}
+
+.search-input {
+  flex: 1;
+}
+
+.search-button {
+  padding: 10px 15px;
+}
+
+/* 欢迎横幅 */
+.welcome-banner {
+  background: linear-gradient(135deg, var(--primary-red), var(--secondary-orange));
+  border-radius: 15px;
+  margin: 30px;
+  padding: 50px 30px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 10px 30px rgba(255, 59, 48, 0.3);
+}
+
+.banner-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.banner-title {
+  font-size: 32px;
+  margin-bottom: 15px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.banner-subtitle {
+  font-size: 18px;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.banner-actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.explore-button {
+  background: white;
+  color: var(--primary-red);
+  border: none;
+  padding: 15px 40px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.explore-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.create-button {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 15px 40px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.create-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* 主要内容区域 */
+.home-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: 24px;
+  margin-bottom: 0;
+  color: #333;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: var(--primary-red);
+  border-radius: 3px;
+}
+
+.more-link {
+  color: var(--primary-red);
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.more-link:hover {
+  color: var(--secondary-orange);
+  text-shadow: 0 0 8px rgba(255, 59, 48, 0.3);
+}
+
+/* 流派分类 */
+.categories-section {
+  margin-bottom: 40px;
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.category-card {
+  text-align: center;
+  padding: 25px 15px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-color: var(--primary-red);
+}
+
+.category-icon {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.category-name {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: var(--primary-red);
+  font-weight: 600;
+}
+
+.category-description {
+  font-size: 14px;
+  color: #666;
+}
+
+/* 热门菜谱排行榜 */
+.popular-section {
+  margin-bottom: 40px;
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.popular-list {
+  background: #f9f9f9;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+}
+
+.popular-item {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.popular-item:last-child {
+  border-bottom: none;
+}
+
+.rank-number {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--primary-red);
+  min-width: 40px;
+}
+
+.popular-content {
+  flex: 1;
+  margin: 0 20px;
+}
+
+.popular-title {
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #333;
+  font-weight: 500;
+}
+
+.popular-author {
+  font-size: 14px;
+  color: #666;
+}
+
+.popular-likes {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.like-icon {
+  font-size: 16px;
+}
+
+.like-count {
+  font-size: 14px;
+  color: #666;
+}
+
+/* 推荐菜谱 */
+.recipes-section {
+  margin-bottom: 40px;
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.recipes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.recipe-card {
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.recipe-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.placeholder-image {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(255, 59, 48, 0.1), rgba(255, 204, 0, 0.1));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.placeholder-icon {
+  font-size: 48px;
+}
+
+.recipe-content {
+  padding: 20px;
+}
+
+.recipe-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: 600;
+}
+
+.recipe-author {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.recipe-meta {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #666;
+}
+
+.recipe-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.like-button,
+.view-button {
+  flex: 1;
+  padding: 8px;
+  font-size: 14px;
+}
+
+/* 骨架屏样式 */
+.skeleton-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  animation: shimmer 1.5s infinite linear;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}
+
+.skeleton-card {
+  background: linear-gradient(to right, #f6f6f6 8%, #f0f0f0 18%, #f6f6f6 33%);
+  background-size: 1200px 100%;
+}
+
+.skeleton-image {
+  height: 150px;
+  background: #e0e0e0;
+}
+
+.skeleton-content {
+  padding: 16px;
+}
+
+.skeleton-line {
+  height: 16px;
+  background: #e0e0e0;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.skeleton-line.short {
+  width: 60%;
+}
+
+/* 响应式设计 */
+@media (max-width: 992px) {
+  .header-content {
+    flex-wrap: wrap;
+  }
+  
+  .main-nav {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid var(--border-color);
+  }
+  
+  .header-right {
+    flex: 0 0 auto;
+    margin-left: 20px;
+  }
+  
+  .welcome-banner {
+    margin: 20px;
+    padding: 30px 20px;
+  }
+  
+  .banner-title {
+    font-size: 24px;
+  }
+  
+  .banner-subtitle {
+    font-size: 16px;
+  }
+  
+  .banner-actions {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .explore-button,
+  .create-button {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .header-left,
+  .header-right {
+    width: 100%;
+  }
+  
+  .main-nav {
+    gap: 15px;
+  }
+  
+  .search-container {
+    width: 100%;
+  }
+  
+  .welcome-banner {
+    margin: 15px;
+    padding: 25px 15px;
+  }
+  
+  .banner-title {
+    font-size: 20px;
+  }
+  
+  .banner-subtitle {
+    font-size: 14px;
+  }
+  
+  .explore-button,
+  .create-button {
+    padding: 12px 30px;
+    font-size: 16px;
+  }
+  
+  .categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .recipes-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  }
+  
+  .popular-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .popular-content {
+    margin: 0;
+  }
+  
+  .section-title {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-header {
+    padding: 10px 0;
+  }
+  
+  .header-content {
+    padding: 0 15px;
+  }
+  
+  .logo {
+    font-size: 24px;
+  }
+  
+  .main-nav {
+    flex-wrap: wrap;
+  }
+  
+  .nav-link {
+    padding: 3px 8px;
+    font-size: 14px;
+  }
+  
+  .categories-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .welcome-banner {
+    padding: 20px 10px;
+  }
+  
+  .banner-title {
+    font-size: 18px;
+  }
+  
+  .banner-subtitle {
+    font-size: 13px;
+  }
+  
+  .explore-button,
+  .create-button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+  
+  .home-main {
+    padding: 20px 15px;
+  }
+  
+  .section-title {
+    font-size: 18px;
+  }
+}
